@@ -15,13 +15,13 @@ end
 
 class Ghc < Formula
   homepage 'http://haskell.org/ghc/'
-  version '7.4.2'
+  version '7.6.1'
   if Hardware.is_64_bit? and not build.build_32_bit?
-    url 'http://www.haskell.org/ghc/dist/7.4.2/ghc-7.4.2-x86_64-apple-darwin.tar.bz2'
-    sha1 '7c655701672f4b223980c3a1068a59b9fbd08825'
+    url 'file:///Users/johnw/Downloads/ghc-7.6.1-x86_64-apple-darwin.tar.bz2'
+    sha1 'd6d150ec50c4a93e6b52014c4731239ab4c32fa2'
   else
-    url 'http://www.haskell.org/ghc/dist/7.4.2/ghc-7.4.2-i386-apple-darwin.tar.bz2'
-    sha1 '60f749893332d7c22bb4905004a67510992d8ef6'
+    url 'http://www.haskell.org/ghc/dist/7.6.1/ghc-7.6.1-i386-apple-darwin.tar.bz2'
+    sha1 ''
   end
 
   env :std

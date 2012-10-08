@@ -11,7 +11,12 @@ class Dovecot < Formula
                           "--libexecdir=#{libexec}",
                           "--sysconfdir=#{etc}",
                           "--localstatedir=#{var}",
-                          "--with-ssl=openssl"
+                          "--with-ssl=openssl",
+                          "--with-sqlite",
+                          "--with-lucene",
+                          "--with-stemmer",
+                          "--with-zlib",
+                          "--with-bzlib"
     system "make install"
   end
 
