@@ -3,7 +3,7 @@ require 'formula'
 class Ipbt < Formula
   homepage 'http://www.chiark.greenend.org.uk/~sgtatham/ipbt/'
   url 'http://www.chiark.greenend.org.uk/~sgtatham/ipbt/ipbt-r9487.tar.gz'
-  sha1 '2ce40ed075c2a6c4dc8ad88ece5eccbb402c71f0'
+  sha1 '780f085fb10515bf608160c0b9e6ed9938510ef7'
   version 'r9487'
 
   def install
