@@ -15,23 +15,23 @@ end
 
 class Ghcbinary < Formula
   if Hardware.is_64_bit? and not build.build_32_bit?
-    url 'http://www.haskell.org/ghc/dist/7.4.2/ghc-7.4.2-x86_64-apple-darwin.tar.bz2'
-    sha1 '7c655701672f4b223980c3a1068a59b9fbd08825'
+    url 'http://www.haskell.org/ghc/dist/7.6.1/ghc-7.6.1-x86_64-apple-darwin.tar.bz2'
+    sha1 'd6d150ec50c4a93e6b52014c4731239ab4c32fa2'
   else
-    url 'http://www.haskell.org/ghc/dist/7.4.2/ghc-7.4.2-i386-apple-darwin.tar.bz2'
+    url 'http://www.haskell.org/ghc/dist/7.6.1/ghc-7.6.1-i386-apple-darwin.tar.bz2'
     sha1 '60f749893332d7c22bb4905004a67510992d8ef6'
   end
-  version '7.4.2'
+  version '7.6.1'
 end
 
 class Ghctestsuite < Formula
-  url 'https://github.com/ghc/testsuite/tarball/ghc-7.4.2-release'
+  url 'https://github.com/ghc/testsuite/tarball/ghc-7.6.1-release'
   sha1 '6b1f161a78a70638aacc931abfdef7dd50c7f923'
 end
 
 class Ghc < Formula
   homepage 'http://haskell.org/ghc/'
-  url 'http://www.haskell.org/ghc/dist/7.4.2/ghc-7.4.2-src.tar.bz2'
+  url 'http://www.haskell.org/ghc/dist/7.6.1/ghc-7.6.1-src.tar.bz2'
   sha1 '73b3b39dc164069bc80b69f7f2963ca1814ddf3d'
 
   env :std
@@ -55,12 +55,12 @@ class Ghc < Formula
       EOS
   end
 
-  def patches
-    # Explained: http://hackage.haskell.org/trac/ghc/ticket/7040
-    # Discussed: https://github.com/mxcl/homebrew/issues/13519
-    # Remove: version > 7.4.2
-    'http://hackage.haskell.org/trac/ghc/raw-attachment/ticket/7040/ghc7040.patch'
-  end
+  # def patches
+  #   # Explained: http://hackage.haskell.org/trac/ghc/ticket/7040
+  #   # Discussed: https://github.com/mxcl/homebrew/issues/13519
+  #   # Remove: version > 7.4.2
+  #   'http://hackage.haskell.org/trac/ghc/raw-attachment/ticket/7040/ghc7040.patch'
+  # end
 
   def install
     # Move the main tarball contents into a subdirectory
